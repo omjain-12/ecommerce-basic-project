@@ -1,13 +1,25 @@
 .add-product-heading {
   margin-top: 0;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 30px;
-  font-size: 28px;
+  font-size: 2rem;
+  color: var(--yellow, #ffe259);
+  letter-spacing: 1px;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
 .add-product-container {
-  padding: 10px;
-  width: 25vw;
+  padding: 32px 28px;
+  width: 28vw;
+  min-width: 320px;
+  margin: 40px auto;
+  background: rgba(40, 40, 55, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  color: #fff;
 }
 
 .add-product-form {
@@ -16,24 +28,54 @@
 }
 
 .form-label {
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--yellow, #ffe259);
+  letter-spacing: 0.5px;
 }
 
 .form-input {
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: background 0.2s, color 0.2s;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.16);
 }
 
 .submit-button {
-  padding: 10px 15px;
-  background-color: var(--yellow);
-  color: var(--dark);
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  color: #222;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #ffd000 0%, #ff8c00 100%);
+  color: #111;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Utility */
+:root {
+  --yellow: #ffe259;
+  --dark: #232526;
 }

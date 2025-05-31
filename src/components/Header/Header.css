@@ -1,33 +1,56 @@
 .header {
-  background-color: var(--dark); /* Dark background */
-  padding: 20px 30px;
-  text-align: left;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(30, 30, 40, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 24px 40px;
+  border-radius: 18px;
+  margin: 18px 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: box-shadow 0.3s;
 }
 
 .header h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 2.5rem;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
   color: var(--yellow);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
 button {
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  padding: 10px 20px;
+  font-size: 1rem;
+  padding: 12px 28px;
+  font-family: inherit;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
 .yellow-button {
-  background-color: var(--yellow);
-  color: var(--dark);
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  color: #222;
+}
+
+.yellow-button:hover {
+  background: linear-gradient(90deg, #ffd000 0%, #ff8c00 100%);
+  color: #111;
+  transform: translateY(-2px) scale(1.04);
 }
 
 .black-button {
-  background-color: var(--dark);
-  color: var(--white);
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  color: #fff;
+}
+
+.black-button:hover {
+  background: linear-gradient(90deg, #111 0%, #333 100%);
+  color: #ffe259;
+  transform: translateY(-2px) scale(1.04);
 }

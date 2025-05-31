@@ -1,40 +1,82 @@
 .products-container {
-  width: 70%;
-  margin: auto;
-  margin-top: 5vh;
+  width: 80%;
+  margin: 40px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 32px 0;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 .product {
-  flex-basis: calc(33% - 20px);
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 50px;
+  flex-basis: calc(33% - 40px);
+  margin: 0 20px 40px 20px;
   text-align: center;
+  background: rgba(40, 40, 55, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  padding: 28px 18px 24px 18px;
+  transition: box-shadow 0.3s, transform 0.2s;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.28);
+  transform: translateY(-4px) scale(1.02);
 }
 
 .product-name {
-  margin-top: 10px;
-  font-weight: 600;
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--yellow, #ffe259);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
 .product img {
-  width: 70%;
-  border: 2px solid var(--dark);
-  border-radius: 3px;
-  height: auto;
+  width: 80%;
+  border: 2px solid var(--yellow, #ffe259);
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
 }
 
-.product button {
-  background-color: var(--yellow);
-  color: var(--dark);
+.product img:hover {
+  transform: scale(1.04) rotate(-2deg);
+}
+
+.product button,
+.yellow-button {
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  color: #222;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 28px;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-top: 10px; /* Space between the product name and the button */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  margin-top: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.product button:hover,
+.yellow-button:hover {
+  background: linear-gradient(90deg, #ffd000 0%, #ff8c00 100%);
+  color: #111;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Utility */
+:root {
+  --yellow: #ffe259;
+  --dark: #232526;
 }
