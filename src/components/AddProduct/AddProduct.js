@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Modal from "../UI/Modal";
 
 import "./AddProduct.css";
+import AppContext from "../../store/App-Context";
 
-function AddProduct({ showAddProduct, closeAddProduct, onAddProduct }) {
+function AddProduct() {
+  const { showAddProduct, closeAddProduct, onAddProduct } = useContext(AppContext);
   const [productName, setProductName] = useState("");
 
   const handleProductNameChange = (event) => {

@@ -1,16 +1,16 @@
 .products-container {
-  width: 80%;
-  margin: 40px auto 0 auto;
+  width: 100%;
+  margin: 40px 10px 0 1px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly; /* changed from space-around */
   gap: 32px 0;
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 .product {
-  flex-basis: calc(33% - 40px);
-  margin: 0 20px 40px 20px;
+  width: 25%; /* ensures 3 per row with some gap */
+  margin-bottom: 40px;
   text-align: center;
   background: rgba(40, 40, 55, 0.85);
   backdrop-filter: blur(8px);
@@ -73,6 +73,32 @@
   background: linear-gradient(90deg, #ffd000 0%, #ff8c00 100%);
   color: #111;
   transform: translateY(-2px) scale(1.04);
+}
+
+.isloading {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #ffe259;
+  background: rgba(40, 40, 55, 0.92);
+  padding: 32px 0;
+  border-radius: 12px;
+  text-align: center;
+  margin: 40px auto;
+  width: 60%;
+  box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.18);
+  letter-spacing: 1px;
+  animation: pulse 1.2s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.03);
+  }
 }
 
 /* Utility */
